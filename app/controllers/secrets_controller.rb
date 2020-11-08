@@ -6,6 +6,6 @@ class SecretsController < ApplicationController
 
   private
   def redirect_if_logged_out
-    redirect_to '/login' if current_user.nil?
+    redirect_to '/login' unless current_user
   end
 end
